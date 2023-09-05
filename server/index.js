@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from "express"
 const app = express()
 import cors from "cors"
@@ -8,7 +10,6 @@ const DB_URL = process.env.DB_URL;
 app.use(cors())
 app.use(express.json())
 app.use('/api/v1', router)
-
 
 async function startApp(){
     try{
